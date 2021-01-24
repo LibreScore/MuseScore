@@ -10,6 +10,8 @@
 #  the file LICENSE.GPL
 #=============================================================================
 
+set(MODULE libmscore)
+
 # MSVC does not depend on copying all.h to the binary directory
 if (NOT MSVC)
    add_custom_command(
@@ -42,8 +44,8 @@ include(${CMAKE_CURRENT_LIST_DIR}/../importexport/musicxml/musicxml.cmake) # set
 include(${CMAKE_CURRENT_LIST_DIR}/../importexport/midiimport/midiimport.cmake) # set (MIDIIMPORT_SRC ...
 include(${CMAKE_CURRENT_LIST_DIR}/../importexport/guitarpro/guitarpro.cmake) # set (GUITARPRO_SRC ...
 
-add_executable (
-   webmscore
+add_library (
+   ${MODULE} STATIC
       ${_all_h_file}
       ${INCS}
 
