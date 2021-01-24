@@ -113,6 +113,7 @@ add_executable (
       unrollrepeats.cpp
       ../mscore/svggenerator.cpp
       ../mscore/exportaudio.cpp
+      ../mscore/exportly.cpp
       ../mscore/savePositions.cpp
       ../mscore/file.cpp
       ../web/main.cpp
